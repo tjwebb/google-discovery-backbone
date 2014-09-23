@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/tjwebb/google-discovery-backbone/issues"
   },
-  "homepage": "https://github.com/tjwebb/google-discovery-backbone"
+  "homepage": "https://github.com/tjwebb/google-discovery-backbone",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  }
 }

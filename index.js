@@ -2,6 +2,7 @@ var WaterlineDiscovery = require('waterline-discovery-doc-import');
 var SailsBackbone = require('sails-backbone');
 var Waterline = require('waterline');
 var Promise = require('bluebird');
+var _ = require('lodash');
 
 /**
  * Generate a Backbone Relational API from a Google Discovery Document
