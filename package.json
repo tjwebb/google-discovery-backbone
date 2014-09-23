@@ -1,0 +1,29 @@
+{
+  "name": "google-discovery-backbone",
+  "version": "1.0.0",
+  "description": "Create Backbone Relational Models from a Google Discovery Document",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjwebb/google-discovery-backbone.git"
+  },
+  "keywords": [
+    "google",
+    "discovery",
+    "document",
+    "backbone",
+    "backbone.js",
+    "generator",
+    "rest",
+    "api"
+  ],
+  "author": "Travis Webb <me@traviswebb.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjwebb/google-discovery-backbone/issues"
+  },
+  "homepage": "https://github.com/tjwebb/google-discovery-backbone"
+}
