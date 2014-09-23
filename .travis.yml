@@ -5,3 +5,13 @@ node_js:
 
 notifications:
   email: false
+
+deploy:
+  provider: npm
+  email: me@traviswebb.com
+  api_key:
+    secure: Xl0qdBQXPFwoURKdxxUwWxt5BL84afMLbA0xGWSTJx+zzZITCx1CE6lXLqwmnT1T1ko45Nw8Y2cA/0V1zQkoK8c8DJBNnDLsht3hauU+c1AIhen2HKbPhrPPuBf1Xt50VpP5WzZMlEi3huE0p7bydVvwjo09PoukHnodtHifs6M=
+  on:
+    tags: true
+    repo: tjwebb/google-discovery-backbone
+    all_branches: true
