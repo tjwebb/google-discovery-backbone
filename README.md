@@ -15,7 +15,10 @@ $ npm install google-discovery-backbone --save
 ```js
 var DiscoveryBackbone = require('google-discovery-backbone');
 var doc = { /* google discovery document */ };
-var models = DiscoveryBackbone.generate(doc);
+DiscoveryBackbone.generate(doc)
+  .then(function (models) {
+    // here are your Backbone models
+  });
 ```
 
 ## License
