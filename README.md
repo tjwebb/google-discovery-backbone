@@ -14,10 +14,12 @@ $ npm install google-discovery-backbone --save
 ## Usage
 ```js
 var DiscoveryBackbone = require('google-discovery-backbone');
+var SailsBackbone = require('sails-backbone');
 var doc = { /* google discovery document */ };
+var models = { };
 DiscoveryBackbone.generate(doc)
-  .then(function (models) {
-    // here are your Backbone models
+  .then(function (orm) {
+    models = SailsBackbone.parse(orm);
   });
 ```
 
