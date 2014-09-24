@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "google-discovery-document": "^0.1.4",
+    "mocha": "^1.21.4",
     "waterline": "^0.10.9"
   }
 }
