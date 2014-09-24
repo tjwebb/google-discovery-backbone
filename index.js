@@ -11,10 +11,11 @@ var _ = require('lodash');
  * @param [config] - optional waterline config object
  */
 exports.generate = function (doc, config) {
+  config  = config || { };
   var waterline = new Waterline();
   _.defaults(config, {
       adapters: {
-        memory: 'sails-memory'
+        memory: require('sails-memory')
       },
       connections: {
         sailsDiscovery: {
@@ -25,6 +26,7 @@ exports.generate = function (doc, config) {
   var collections = WaterlineDiscovery.createCollections(doc);
 
   return new Promise(function (resolve, reject) {
+    _.each(collections, waterline.loadCollection, waterline);
     waterline.initialize(config, function (error, orm) {
       if (error) return reject(error);
 

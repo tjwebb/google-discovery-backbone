@@ -27,6 +27,12 @@
   },
   "homepage": "https://github.com/tjwebb/google-discovery-backbone",
   "dependencies": {
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "sails-memory": "^0.10.3",
+    "waterline-discovery-doc-import": "0.0.2"
+  },
+  "devDependencies": {
+    "google-discovery-document": "^0.1.4",
+    "waterline": "^0.10.9"
   }
 }
