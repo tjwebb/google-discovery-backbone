@@ -31,11 +31,11 @@
     "lodash": "^2.4.1",
     "sails-backbone": "^1.0.5",
     "sails-memory": "^0.10.3",
-    "waterline-discovery-doc-import": "latest"
+    "waterline-discovery-doc-import": "latest",
+    "waterline": "^0.10.9",
+    "google-discovery-document": "^0.1.4"
   },
   "devDependencies": {
-    "google-discovery-document": "^0.1.4",
-    "mocha": "^1.21.4",
-    "waterline": "^0.10.9"
+    "mocha": "^1.21.4"
   }
 }
