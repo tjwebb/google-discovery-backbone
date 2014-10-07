@@ -28,9 +28,18 @@ exports.generate = function (doc, config) {
   return new Promise(function (resolve, reject) {
     _.each(collections, waterline.loadCollection, waterline);
     waterline.initialize(config, function (error, orm) {
-      if (error) return reject(error);
+      if (error) {
+        // resolves issue #2; if connection is already registered, then use that
+        // ORM which has already been initialized.
+        if (error.name === 'AdapterError' && error.message === 'Connection is already registered') {
+          orm = waterline;
+        }
+        else {
+          return reject(error);
+        }
+      }
 
-      var sails = createSailsObject(doc, orm);
+      var sails = createSailsObject(doc, orm.collections);
       return resolve(SailsBackbone.generate(sails));
     });
   });
@@ -39,9 +48,9 @@ exports.generate = function (doc, config) {
 /**
  * Manufacture a partially-hydrated sails object for sails-backbone
  */
-function createSailsObject (doc, orm) {
+function createSailsObject (doc, collections) {
   return {
-    models: orm.collections,
+    models: collections,
     config: {
       blueprints: {
         prefix: doc.servicePath
