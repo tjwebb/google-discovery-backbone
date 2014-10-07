@@ -1,6 +1,6 @@
 {
   "name": "google-discovery-backbone",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Create Backbone Relational Models from a Google Discovery Document",
   "main": "index.js",
   "scripts": {
