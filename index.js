@@ -53,7 +53,7 @@ function createSailsObject (doc, collections) {
     models: collections,
     config: {
       blueprints: {
-        prefix: doc.servicePath
+        prefix: doc.servicePath + '/resources'
       }
     }
   };
